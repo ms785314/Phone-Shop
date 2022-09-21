@@ -11,7 +11,7 @@
       "id": "6249d49f9567fafbe4ca424b",
       "index": 1,
       "picture": "https://img.freepik.com/free-photo/close-up-young-successful-man-smiling-camera-standing-casual-outfit-against-blue-background_1258-66609.jpg?size=626&ext=jpg&ga=GA1.2.933560287.1648219491",
-      "rating": 5,
+      "rating": 4,
       "name": "Lenora Clements",
       "reviewText":"Misfit’s (kind of) debut album has been ripped off and repackaged many times but it remains a schlocky slice of shock-rock proto-hardcore."
     },
@@ -19,7 +19,7 @@
       "id": "6249d49f173419f1e66455a0",
       "index": 2,
       "picture": "https://img.freepik.com/free-photo/handsome-young-man-with-new-stylish-haircut_176420-19637.jpg?size=626&ext=jpg&ga=GA1.2.933560287.1648219491",
-      "rating": 5,
+      "rating": 4,
       "name": "Kaitlin Miles",
       "reviewText":"Good Service. The Vintage brand sets out to boost its indie street cred by adding an offset-waist solidbody to its pre-roughed-up Icon series – does it sound as ‘alternative’ as it looks?"
     },
@@ -41,7 +41,7 @@
     },
     {
       "id": "6249d49ffd99b2ae1784a54e",
-      "index": 5,
+      "index": 4,
       "picture": "https://img.freepik.com/free-photo/no-problem-concept-bearded-man-makes-okay-gesture-has-everything-control-all-fine-gesture-wears-spectacles-jumper-poses-against-pink-wall-says-i-got-this-guarantees-something_273609-42817.jpg?size=626&ext=jpg&ga=GA1.2.933560287.1648219491",
       "rating": 5,
       "name": "Grimes Livingston",
@@ -52,6 +52,24 @@
       "index": 6,
       "picture": "https://img.freepik.com/free-photo/confident-attractive-caucasian-guy-beige-pullon-smiling-broadly-while-standing-against-gray_176420-44508.jpg?size=626&ext=jpg&ga=GA1.2.933560287.1648219491",
       "rating": 5,
+      "name": "Jami Mullins",
+      "reviewText":"The Vintage brand sets out to boost its indie street cred by adding an offset-waist solidbody to its pre-roughed-up Icon series – does it sound as ‘alternative’ as it looks?"
+    }
+    ,
+    {
+      "id": "6249d49f7b35f474ef786908b",
+      "index": 7,
+      "picture": "https://img.freepik.com/free-photo/happy-man-denim-outfit-smiling-pink-background-cheerful-brunette-guy-white-tshirt-laughing-isolated-backdrop_197531-27695.jpg?w=740&t=st=1663769597~exp=1663770197~hmac=c49d5e61c00c2e0f33a6dcf7b9cbb6863b053c62a5eecbd5e1ce4929d1edeea1",
+      "rating": 4,
+      "name": "Jami Mullins",
+      "reviewText":"The Vintage brand sets out to boost its indie street cred by adding an offset-waist solidbody to its pre-roughed-up Icon series – does it sound as ‘alternative’ as it looks?"
+    }
+    ,
+    {
+      "id": "6249d49f7b3f5474fef786908b",
+      "index": 8,
+      "picture": "https://img.freepik.com/free-photo/inspired-african-guy-pointing-finger-laughing-positive-black-man-smiling_197531-20236.jpg?w=740&t=st=1663769662~exp=1663770262~hmac=3680afd5c4cd41451723c4442595d8ff12c8ffbf2efcee1363f45285f74bdbb8",
+      "rating": 4,
       "name": "Jami Mullins",
       "reviewText":"The Vintage brand sets out to boost its indie street cred by adding an offset-waist solidbody to its pre-roughed-up Icon series – does it sound as ‘alternative’ as it looks?"
     }
