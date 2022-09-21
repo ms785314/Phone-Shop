@@ -14,6 +14,7 @@ const Home = () => {
     const handleForward = () => {
         if (start < reviews.length - 3) {
             setStart(start + 1)
+            
         }
         
     }
@@ -23,8 +24,10 @@ const Home = () => {
         }
         
     }
-    const navigator = useNavigate();
+    // const navigator = useNavigate();
 
+    let targetReviews = reviews.slice(start, start + 3);
+    ;
     // const element = <FontAwesomeIcon icon={faCoffee} />
 
     return (
@@ -53,8 +56,10 @@ const Home = () => {
                 <button className='bg-blue-500 hover:bg-blue-600 p-4 self-center text-white font-bold' onClick={handleBackward}>  <FontAwesomeIcon icon={faArrowLeft} /></button>
                     
                     <div className='flex justify-center gap-3'>
-                        {
-                            reviews.slice(start,start+3).map(review => <Review key={review.id} review={review}></Review>)
+                        {  
+                        targetReviews.map(review =>  <Review key={review.id} review={review}
+                            willBigger={start + 2}
+                            ></Review>)
                         }
                     </div>
                     <button className='bg-blue-500 p-4 self-center text-white font-bold  hover:bg-blue-600' onClick={handleForward}><FontAwesomeIcon  icon={faArrowRight}></FontAwesomeIcon></button>
