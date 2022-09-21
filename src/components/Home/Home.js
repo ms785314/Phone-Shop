@@ -4,6 +4,7 @@ import img from '../../images/download.jfif'
 import Review from '../Review/Review';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const [reviews, setReviews] = useReviews();
@@ -22,11 +23,12 @@ const Home = () => {
         }
         
     }
+    const navigator = useNavigate();
 
     // const element = <FontAwesomeIcon icon={faCoffee} />
 
     return (
-        <div className='text-center mt-9 mb-14'>
+        <div className='text-center mt-9 mb-14 relative'>
 
             <div className='py-6  grid grid-cols-2 gap-4 h-[60vh] px-14'>
                 <div className=' flex flex-col items-center justify-center'>
@@ -60,7 +62,8 @@ const Home = () => {
             </div>
 
 
-                
+                <Link to='/reviews' className='bg-blue-500 hover:bg-blue-600 p-4 rounded font-bold text-xl text-white absolute right-14 bottom-[-30px]'>Show All</Link>
+                {/* <button onClick={()=> navigator('/reviews')} className='bg-blue-500 p-4 rounded-lg font-bold text-xl text-white absolute right-14 bottom-[-30px]'>Show All</button> */}
         </div>
     );
 };

@@ -13,7 +13,7 @@ const Review = (props) => {
     // console.log(arr);
 
     return (
-        <div className='flex flex-col h-[240px] border shadow-lg rounded-[20px] w-[205px] p-4 ' style={{alignItems:'center'}}>
+        <div  className='justify-center  flex flex-col h-[240px] border shadow-lg rounded-[20px] w-[205px] p-4 ' style={{alignItems:'center'}}>
             <img className='w-[80px] justify-between h-[80px] rounded-[50%]' src={picture} alt="" />
             <div className='font-bold capitalize text-xl my-2'>{name}</div>
             <div className='font-bold flex '>
