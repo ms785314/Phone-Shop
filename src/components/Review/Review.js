@@ -2,21 +2,19 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-const Review = ({willBigger,review}) => {
-    // console.log(props);
+const Review = ({review, bigger}) => {
+   
     const {name,picture,reviewText,rating,index} = review;
-//    console.log(reviewText.length);
+
+    
     let NumOfStars = [];
     for (let i = 0; i < rating; i++) {
         NumOfStars.push(i);
     }
 
-    console.log(willBigger );
-    // console.log(index);
-    // console.log(arr);
-
+   
     return (
-        <div className={willBigger && `${index === willBigger? 'scale-110': 'scale-75 opacity-70'}`}>
+        <div className={(typeof bigger === 'boolean') && `${bigger? 'scale-110': 'scale-75 opacity-70'}`}>
             <div  className='justify-center  flex flex-col h-[240px] border shadow-lg rounded-[20px] w-[205px] p-4' style={{alignItems:'center'}}>
             <img className='w-[80px] justify-between h-[80px] rounded-[50%]' src={picture} alt="" />
             {index}

@@ -8,22 +8,32 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const [reviews, setReviews] = useReviews();
-    // let a = 2;
+    
     const [start, setStart] = useState(0);
-
+    console.log('start', start);
+    
     const handleForward = () => {
-        if (start < reviews.length - 3) {
+        if (start < reviews.length - 1) {
+
             setStart(start + 1)
-            
+
+        } else {
+            setStart(0);
         }
-        
+
+
     }
     const handleBackward = () => {
         if (start > 0) {
             setStart(start - 1)
+        }else{
+            setStart(reviews.length - 1);
         }
-        
+
     }
+    let bigger = true;
+
+    // const [bigger, setBigger] = useState(false);
     // const navigator = useNavigate();
 
     let targetReviews = reviews.slice(start, start + 3);
@@ -53,22 +63,40 @@ const Home = () => {
                 <h1 className='text-5xl font-bold mb-10'>Reviews:{reviews.length}</h1>
 
                 <div className='flex justify-center gap-4'>
-                <button className='bg-blue-500 hover:bg-blue-600 p-4 self-center text-white font-bold' onClick={handleBackward}>  <FontAwesomeIcon icon={faArrowLeft} /></button>
-                    
+                    <button className='bg-blue-500 hover:bg-blue-600 p-4 self-center text-white font-bold' onClick={handleBackward}>  <FontAwesomeIcon icon={faArrowLeft} /></button>
+
                     <div className='flex justify-center gap-3'>
-                        {  
-                        targetReviews.map(review =>  <Review key={review.id} review={review}
-                            willBigger={start + 2}
-                            ></Review>)
+                        {targetReviews.length === 3 ?
+                            targetReviews.map(review => {
+                                bigger = !bigger;
+                                return (
+                                    
+                                    <Review bigger={bigger} key={review.id} review={review}
+                                        willBigger={start + 2}
+                                    ></Review>
+                                )
+                                
+                            })
+                            : (targetReviews = [...targetReviews, ...reviews.slice(0, 3 - targetReviews.length)]).map(review => {
+                                // setBigger(!bigger);
+                                bigger = !bigger;
+                                return (
+                                    
+                                    <Review bigger={bigger} key={review.id} review={review}
+                                        willBigger={start + 2}
+                                    ></Review>
+                                )
+                            })
+
                         }
                     </div>
-                    <button className='bg-blue-500 p-4 self-center text-white font-bold  hover:bg-blue-600' onClick={handleForward}><FontAwesomeIcon  icon={faArrowRight}></FontAwesomeIcon></button>
+                    <button className='bg-blue-500 p-4 self-center text-white font-bold  hover:bg-blue-600' onClick={handleForward}><FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
                 </div>
             </div>
 
 
-                <Link to='/reviews' className='bg-blue-500 hover:bg-blue-600 p-4 rounded font-bold text-xl text-white absolute right-14 bottom-[-30px]'>Show All</Link>
-                {/* <button onClick={()=> navigator('/reviews')} className='bg-blue-500 p-4 rounded-lg font-bold text-xl text-white absolute right-14 bottom-[-30px]'>Show All</button> */}
+            <Link to='/reviews' className='bg-blue-500 hover:bg-blue-600 p-4 rounded font-bold text-xl text-white absolute right-14 bottom-[-30px]'>Show All</Link>
+            {/* <button onClick={()=> navigator('/reviews')} className='bg-blue-500 p-4 rounded-lg font-bold text-xl text-white absolute right-14 bottom-[-30px]'>Show All</button> */}
         </div>
     );
 };
