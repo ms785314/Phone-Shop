@@ -2,9 +2,10 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-const Review = ({review, bigger}) => {
+const Review = (props) => {
    
-    const {name,picture,reviewText,rating,index} = review;
+    const bigger = props.bigger;
+    const {name,picture,reviewText,rating,index} = props.review;
 
     
     let NumOfStars = [];
@@ -12,10 +13,20 @@ const Review = ({review, bigger}) => {
         NumOfStars.push(i);
     }
 
+    let className;
+
+    if ( typeof bigger === 'boolean') {
+        if (bigger === true) {
+             className = 'scale-110';
+        }else{
+            className = 'scale-75 opacity-70';
+        }
+    }
+    console.log(props.children);
    
     return (
-        <div className={(typeof bigger === 'boolean') && `${bigger? 'scale-110': 'scale-75 opacity-70'}`}>
-            <div  className='justify-center  flex flex-col h-[240px] border shadow-lg rounded-[20px] w-[205px] p-4' style={{alignItems:'center'}}>
+        <div className={`${className} + 'w-full flex justify-center '`}>
+            <div  className='justify-center  flex flex-col  border shadow-lg rounded-[20px] w-[205px] p-4' style={{alignItems:'center'}}>
             <img className='w-[80px] justify-between h-[80px] rounded-[50%]' src={picture} alt="" />
             {index}
             <div className='font-bold capitalize text-xl my-2'>{name}</div>
@@ -24,7 +35,10 @@ const Review = ({review, bigger}) => {
                     NumOfStars.map(a=> <FontAwesomeIcon color='orange' key={a} icon={faStar}></FontAwesomeIcon>)
                 }
             </div>
-            <div>{reviewText.length > 100 ? reviewText.slice(0,100) + '..': reviewText}</div>
+            <div>{reviewText.length > 70 ? reviewText.slice(0,70) + '..': reviewText}</div>
+            {
+                props.children ? props.children : null
+            }
         </div>
         </div>
     );
