@@ -22,7 +22,7 @@ const Review = (props) => {
             className = 'scale-75 opacity-70';
         }
     }
-    console.log(props.children);
+    // console.log(props.children);
    
     return (
         <div className={`${className} + 'w-full flex justify-center '`}>

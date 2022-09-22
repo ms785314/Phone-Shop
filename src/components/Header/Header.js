@@ -4,7 +4,7 @@ import { Link} from 'react-router-dom';
 const Header = () => {
     
     return (
-        <div className='w-full flex justify-center gap-x-4 font-bold py-4 text-xl'>
+        <div className='w-full bg-blue-500 flex justify-center gap-x-4 font-bold py-4 text-xl text-white'>
             <Link     to='/home'>Home</Link>
             <Link  to='/reviews'>Reviews</Link>
             <Link to='dashboard'>Dash Board</Link>

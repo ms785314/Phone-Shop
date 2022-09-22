@@ -40,16 +40,19 @@ const Home = () => {
     ;
     // const element = <FontAwesomeIcon icon={faCoffee} />
 
+    // style={{clipPath:'polygon(0 0, 100% 0, 100% 80%, 0 100%)'}}
+
     return (
-        <div className='text-center mt-9 mb-14 relative'>
-
-            <div className='py-6  grid grid-cols-2 gap-4 h-[60vh] px-14'>
-                <div className=' flex flex-col items-center justify-center'>
-                    <div className='text-6xl  font-bold text-justify   leading-tight'>YOUR NEXT <span className='text-blue-500'>GUITAR</span>
+        <div className='text-center  mb-14 relative ' >
+            <span className=' absolute left-0 h-[60%] z-[-10] w-full bg-blue-500' style={{clipPath:'polygon(0 0, 100% 0, 100% 70%, 0 100%)'}}></span>
+            <div className='py-10 relative   grid grid-cols-2 gap-4 h-[60vh] px-14 ' >
+            
+                <div  className=' flex flex-col items-center justify-center'>
+                    <div className='text-6xl  font-bold text-justify   leading-tight'>YOUR NEXT <span className='text-white'>GUITAR</span>
                         <br />
-                        YOUR BEST <span className='text-blue-500'>GUITAR</span></div>
+                        YOUR BEST <span className='text-white'>GUITAR</span></div>
 
-                    <button className='self-start font-bold text-2xl bg-blue-500 text-white ml-14 p-4 rounded hover:bg-blue-600 mt-7' >Shop Now</button>
+                    <button className='self-start font-bold text-2xl bg-white  ml-14 p-4 rounded shadow-lg hover:shadow-none mt-7' >Shop Now</button>
                 </div>
                 <div className='relative  bg-blue-300 rounded-lg'>
                     <div className='flex justify-center align-middle absolute w-full h-full left-6 top-10 '>
