@@ -63,7 +63,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='mt-14 mb-14 px-5 '>
-                <h1 className='text-5xl font-bold mb-10'>Reviews:{reviews.length}</h1>
+                <h1 className='text-3xl text-gray-600 font-bold mb-10'>Reviews</h1>
 
                 <div className='flex justify-center gap-4'>
                     <button className='bg-blue-500 hover:bg-blue-600 p-4 self-center text-white font-bold' onClick={handleBackward}>  <FontAwesomeIcon icon={faArrowLeft} /></button>
